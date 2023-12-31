@@ -1,6 +1,6 @@
 - name: variables concept pkaybook
   hosts: localhost
-  vars-files:
+  vars_files:
   - filevar.yaml
   tasks:
   - name: checkign variables
