@@ -4,14 +4,17 @@
   tasks:
   - name: nignx
     ansible.builtin.package:
-      name: 
-      - git
-      - postfix
+      name: nginx
       state: present
   - name: start service
     ansible.builtin.service:
-      name: 
-      - git
-      - postfix
+      name: nginx
       state: started
-  
+  - name:  mysql
+    ansible.builtin.package:
+      name: mysql
+      state: present
+  - name: start service
+    ansible.builtin.service:
+      name: mqsql
+      state: started

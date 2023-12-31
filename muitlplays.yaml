@@ -1,0 +1,15 @@
+- name: play 1
+  become: yes
+  hosts: localhost
+  tasks:
+  - name: play 1 and task 1
+    ansible.builtin.debug:
+      msg: "hello showing  play 1"
+
+- name: play 2
+  become: yes
+  hosts: localhost
+  tasks:
+  - name: play 2 and task 2
+    ansible.builtin.debug:
+      msg: "hello showing  play 2"
