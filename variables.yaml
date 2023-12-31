@@ -1,0 +1,9 @@
+- name: variables concept pkaybook
+  hosts: localhost
+  vars:
+    course: "DevOps"
+    duration: 110
+  tasks:
+  - name: checkign variables
+    ansible.builtin.debug:
+      msg: "this is {{course}} course and duration is {{duration}}"
