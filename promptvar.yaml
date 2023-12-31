@@ -1,0 +1,13 @@
+- name: prompt play
+  hosts: localhost
+  vars_prompt:
+  - name: USERNAM
+    prompt: please enter username
+    private: false
+  - name: pass
+    prompt: please enter username
+    private: true
+  tasks:
+  - name: task check
+    ansible.builtin.debug:
+     msg: "{{USERNAM}},{{pass}}"
