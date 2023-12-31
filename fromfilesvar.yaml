@@ -1,0 +1,10 @@
+- name: variables concept pkaybook
+  hosts: localhost
+  vars-files:
+  - filevar.yaml
+  tasks:
+  - name: checkign variables
+    vars: #task level
+      
+    ansible.builtin.debug:
+      msg: "this is {{course}} course and duration is {{duration}}"
