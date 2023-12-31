@@ -4,7 +4,7 @@
     course: "DevOps"
     duration: 110
   tasks:
-    name: checkign variables
+  - name: checkign variables
     vars: #task level
       course: "task level"
       duration: 90
