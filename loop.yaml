@@ -16,7 +16,7 @@
   tasks: # here we are writing each  conditon each module
   - name: checking user presence
     ansible.builtin.package:
-     name: {{item}}
+     name: "{{item}}"
      state: present
     loop:
      - postfix
