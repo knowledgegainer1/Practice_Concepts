@@ -1,0 +1,19 @@
+- name: datatypes sample
+  hosts: localhost
+  vars: #vars is map like key and value 
+   name: sadashiva
+   age: 20
+   skills:   #skills is list type
+   - devops
+   - linux
+   experience:  #exp is map type,key value pair
+    devops: 1
+    AWS: 1
+   trainer: true #boolean
+  tasks:
+  - name: executing
+    ansible.builtin.debug:
+     msg: " name is {{name}}"
+  - name: executing
+    ansible.builtin.debug:
+     msg: " skills and experience: {{skills}} and {{experience}}"
