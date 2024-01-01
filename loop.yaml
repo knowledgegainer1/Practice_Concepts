@@ -1,0 +1,12 @@
+- name: conditions testing
+  hosts: localhost
+  become: yes
+  tasks: # here we are writing each  conditon each module
+  - name: checking user presence
+    ansible.builtin.debug:
+     msg: "hello {{item}}"
+    loop:
+     - sadashiv
+     - reddy
+     - gottam
+    

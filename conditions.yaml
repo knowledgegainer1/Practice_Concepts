@@ -1,9 +1,9 @@
 - name: conditions testing
   hosts: localhost
   become: yes
-  tasks:
+  tasks: # here we are writing each  conditon each module
   - name: checking user presence
-    ansible.builtin.command: id roboshop
+    ansible.builtin.command: id roboshop  #from this cmd output will be stored  to below user variable
     register: user
     ignore_errors: true
   - name: print variable
