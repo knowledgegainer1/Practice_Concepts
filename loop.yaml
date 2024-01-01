@@ -16,9 +16,9 @@
   tasks: # here we are writing each  conditon each module
   - name: checking user presence
     ansible.builtin.package:
-     name: "{{item}}"
-     state: present
+     name: "{{item.name}}"
+     state: "{{item.state}}"
     loop:
-     - postfix
-     - nginx
-     - git
+     - {name: 'git' , state : 'present'}
+     - {name: 'postfix' , state : 'absent'}
+     - {name: 'nginx' , state : 'present'}
